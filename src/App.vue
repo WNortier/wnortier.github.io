@@ -111,7 +111,7 @@ export default {
           name: "Loop-Lab",
           link: "https://wnortier.github.io/bootstrap-4-codealong-site/",
           description:
-            "This is a test. Loop-Lab is not my original work - it is a 'code-along' project I completed part of a Bootstrap 4 training course.  I always strive to create responsive and professional front-end designs."
+            "Loop-Lab is not my original work - it is a 'code-along' project I completed part of a Bootstrap 4 training course.  I always strive to create responsive and professional front-end designs."
         }
       ]
     }
