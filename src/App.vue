@@ -94,24 +94,24 @@ export default {
         },
         {
           id: 4,
-          name: "Phone-Bills",
-          link: "https://wnortier.github.io/phone-bills-working-with-dom/",
-          description:
-            "A collection of phone bill widgets hooked up to the DOM with Javascript and tested using the Mocha test framework and Chai assertion library."
-        },
-        {
-          id: 5,
           name: "Registrations",
           link: "",
           description:
             "The registrations app is built on the backend using NodeJS with the Express module.  Have fun printing and editing registration numbers!"
         },
         {
-          id: 6,
+          id: 5,
           name: "Loop-Lab",
           link: "https://wnortier.github.io/bootstrap-4-codealong-site/",
           description:
             "Loop-Lab is not my original work - it is a 'code-along' project I completed part of a Bootstrap 4 training course.  I always strive to create responsive and professional front-end designs."
+        },
+        {
+          id: 6,
+          name: "Phone-Bills",
+          link: "https://wnortier.github.io/phone-bills-working-with-dom/",
+          description:
+            "A collection of phone bill widgets hooked up to the DOM with Javascript and tested using the Mocha test framework and Chai assertion library."
         }
       ]
     }
