@@ -5,19 +5,11 @@
         <h4 class="card-title">{{project.name}}</h4>
         <h6 class="card-subtitle text-muted"></h6>
         <p class="card-text">{{project.description}}</p>
-        <div class="mt-auto card-buttons">
-          <a
-            class="btn btn-outline-primary"
-            target="_blank"
-            title="Link opens in new tab"
-            :href="project.link"
-          >View Project</a>
-          <!-- <a
-            class="btn btn-outline-primary pull-right my-3"
-            target="_blank"
-            title="Link opens in new tab"
-            :href="project.link"
-          >View Project</a> -->
+        <div class="mt-auto justify-content-around">
+          <a :href="project.link" title="Project" class="float-left" target="_blank"><i style="margin-right: 0.5em;"
+              class="fas fa-link m-1"></i>Project</a>
+          <a :href="project.code" title="Code" class="float-right" target="_blank"><i style="margin-right: 0.5em;"
+              class="fas fa-code m-1"></i>Code</a>
         </div>
       </div>
     </div>
@@ -25,7 +17,6 @@
 </template>
 
 <script>
-
 export default {
   props: ["project"],
 
@@ -33,8 +24,4 @@ export default {
 </script>
 
 <style scoped>
-/* .card-buttons {
-  position: relative;
-  bottom: 100;
-} */
 </style>
