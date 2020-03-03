@@ -64,7 +64,7 @@ export default {
           link: "",
           code: "",
           description:
-            "The shoe catalogue is run as a client and is linked via APIs to edit and return info from the database which retains and persists the data.  Front-end is built using Tailwind.css."
+            "The shoe catalogue is run as a client and is linked via APIs to edit and return info from the database which retains and persists the data.  The front-end is built using Tailwind.css."
         },
         {
           id: 2,
@@ -72,7 +72,7 @@ export default {
           link: "",
           code: "",
           description:
-            "KonenctX uses the google maps API to mark free wifi and sportsground locations from a database along with the approximate distance and directions on how to reach them."
+            "KonnectX uses the google maps API to mark free wifi and sportsground locations from a database. Searches can provide the locations' approximate distance and directions on how to reach them."
         },
         {
           id: 3,
@@ -119,7 +119,6 @@ export default {
       .get("https://api.github.com/users/wnortier/repos")
       .then(res => {
         let response = res.data;
-        console.log(response)
         let shoeCatalogueProject = response.filter(function(e) {
           return e.name.includes("shoe");
         });
@@ -150,7 +149,6 @@ export default {
         self.projects[4].link = loopLabProject[0].description;
         self.projects[5].code = phoneBillsProject[0].html_url;
         self.projects[5].link = phoneBillsProject[0].description;
-        console.log(self.projects)
       })
       .catch(error => console.log(error));
   }
