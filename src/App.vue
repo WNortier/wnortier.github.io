@@ -98,13 +98,21 @@ export default {
           description:
             "Loop-Lab is not my original work - it is a 'code-along' project I completed part of a Bootstrap 4 training course.  I always strive to create responsive and professional front-end designs."
         },
+        // {
+        //   id: 6,
+        //   name: "Phone-Bills",
+        //   link: "https://wnortier.github.io/phone-bills-working-with-dom/",
+        //   code: "",
+        //   description:
+        //     "A collection of phone bill widgets hooked up to the DOM with Javascript and tested using the Mocha test framework and Chai assertion library."
+        // },
         {
           id: 6,
-          name: "Phone-Bills",
-          link: "https://wnortier.github.io/phone-bills-working-with-dom/",
+          name: "ChatCord",
+          link: "",
           code: "",
           description:
-            "A collection of phone bill widgets hooked up to the DOM with Javascript and tested using the Mocha test framework and Chai assertion library."
+            "ChatCord is a realtime chat web application with chatrooms.  It was built on the backend using NodeJS with the Express module and the socket.io websockets package."
         }
       ]
     };
@@ -116,9 +124,10 @@ export default {
   created() {
     var self = this;
     axios
-      .get("https://api.github.com/users/wnortier/repos")
+      .get("https://api.github.com/users/wnortier/repos?&per_page=100")
       .then(res => {
         let response = res.data;
+        console.log(res.data);
         let shoeCatalogueProject = response.filter(function(e) {
           return e.name.includes("shoe");
         });
@@ -126,7 +135,7 @@ export default {
           return e.name.includes("Konnect");
         });
         let waitersProject = response.filter(function(e) {
-          return e.name.includes("waiter");
+          return e.name.includes("waiter-availability-with-express");
         });
         let registrationsProject = response.filter(function(e) {
           return e.name.includes("registra");
@@ -134,9 +143,18 @@ export default {
         let loopLabProject = response.filter(function(e) {
           return e.name.includes("codealong");
         });
-        let phoneBillsProject = response.filter(function(e) {
-          return e.name.includes("phone");
+        let chatCordProject = response.filter(function(e) {
+          return e.name.includes("chat");
         });
+        console.log(shoeCatalogueProject);
+        console.log(konnectxProject);
+        console.log(waitersProject);
+        console.log(registrationsProject);
+        console.log(loopLabProject);
+        console.log(chatCordProject);
+        // let phoneBillsProject = response.filter(function(e) {
+        //   return e.name.includes("phone");
+        // });
         self.projects[0].code = shoeCatalogueProject[0].html_url;
         self.projects[0].link = shoeCatalogueProject[0].description;
         self.projects[1].code = konnectxProject[0].html_url;
@@ -147,8 +165,12 @@ export default {
         self.projects[3].link = registrationsProject[0].description;
         self.projects[4].code = loopLabProject[0].html_url;
         self.projects[4].link = loopLabProject[0].description;
-        self.projects[5].code = phoneBillsProject[0].html_url;
-        self.projects[5].link = phoneBillsProject[0].description;
+        // self.projects[5].code = phoneBillsProject[0].html_url;
+        // self.projects[5].link = phoneBillsProject[0].description;
+        self.projects[5].code = chatCordProject[0].html_url;
+        self.projects[5].link = chatCordProject[0].description;
+        console.log(self.projects[5].code);
+        console.log(self.projects[5].link);
       })
       .catch(error => console.log(error));
   }
