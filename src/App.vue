@@ -127,7 +127,6 @@ export default {
       .get("https://api.github.com/users/wnortier/repos?&per_page=100")
       .then(res => {
         let response = res.data;
-        console.log(res.data);
         let shoeCatalogueProject = response.filter(function(e) {
           return e.name.includes("shoe");
         });
@@ -146,12 +145,6 @@ export default {
         let chatCordProject = response.filter(function(e) {
           return e.name.includes("chat");
         });
-        console.log(shoeCatalogueProject);
-        console.log(konnectxProject);
-        console.log(waitersProject);
-        console.log(registrationsProject);
-        console.log(loopLabProject);
-        console.log(chatCordProject);
         // let phoneBillsProject = response.filter(function(e) {
         //   return e.name.includes("phone");
         // });
