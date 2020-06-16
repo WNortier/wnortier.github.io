@@ -24,15 +24,15 @@ img {
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 501px) and (max-width: 768px) {
   .flex-item {
-    width: 450px;
+    width: 320px;
     margin: 1rem;
     border: 0.85px solid lightgrey;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .flex-item {
     width: 380px;
     margin: 1rem;
