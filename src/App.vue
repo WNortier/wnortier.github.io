@@ -62,7 +62,7 @@
         <h2>Wakatime Developer Statistics</h2>
         <hr />
       </div>
-      <div class="row">
+      <div class="row flex-container">
         <app-Wakatime
           v-for="(wakatime, index) in wakatime"
           :wakatime="wakatime"
@@ -232,5 +232,11 @@ export default {
 footer {
   color: white;
   text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

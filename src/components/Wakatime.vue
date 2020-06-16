@@ -1,9 +1,7 @@
 <template>
-  <div class="col-md-6 col-sm-4">
-    <div class="card h-auto my-5">
-      <div class="card-body d-flex flex-column">
-        <a :href="wakatime.site"><img height="385" :src="wakatime.src"/></a>
-      </div>
+  <div>
+    <div class="flex-item">
+      <img height="385" :src="wakatime.src" />
     </div>
   </div>
 </template>
@@ -14,4 +12,23 @@ export default {
 };
 </script>
 
-<style lang="stylus"></style>
+<style scoped>
+.flex-item {
+  width: 530px;
+  margin: 1rem;
+  border: 0.85px solid lightgrey;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .flex-item {
+    width: 450px;
+    margin: 1rem;
+    border: 0.85px solid lightgrey;
+  }
+}
+</style>

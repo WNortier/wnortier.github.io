@@ -1,4 +1,4 @@
-/* eslint-disable */ 
+/* eslint-disable */
 <template>
   <div>
     <footer id="main-footer" class="flex">
@@ -24,7 +24,8 @@
   </div>
 </template>
 <script>
-/* eslint-disable */ 
+/* eslint-disable */
+
 export default {
   data() {
     return {
@@ -41,6 +42,7 @@ export default {
 <style scoped>
 footer {
   border-top: 1px solid grey;
-  background-color: rgb(40,142,197)
+  background-color: rgb(40, 142, 197);
+  width: 100%;
 }
 </style>
