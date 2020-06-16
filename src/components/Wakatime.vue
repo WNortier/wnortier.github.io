@@ -34,7 +34,7 @@ img {
 
 @media (max-width: 768px) {
   .flex-item {
-    width: 400px;
+    width: 380px;
     margin: 1rem;
     border: 0.85px solid lightgrey;
   }
