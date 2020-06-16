@@ -4,22 +4,40 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center py-5">
-            <h1 class="display-4 text-left" style="font-family: tangerine">Warwick Nortier</h1>
+            <h1 class="display-4 text-left" style="font-family: tangerine">
+              Warwick Nortier
+            </h1>
             <p class="lead">
-              Hello world! I'm a hardworking full stack web developer from Cape Town with a passion for coding and
-              working with people.
-              Listed below are some of my projects and my CV.
-              <a href="https://docs.google.com/document/d/1fBssyWkHStn7B299Zjk7dkELchdSHh6GFeblH9ibWLg/edit?usp=sharing"
-                title="Google-Docs">
-                <i style="margin-right: 0.5em;" class="align-left fas fa-paperclip"></i>Curriculum Vitae
+              Hello world! I'm a hardworking full stack web developer from Cape
+              Town with a passion for coding and working with people. Listed
+              below are some of my projects and my CV.
+              <a
+                href="https://docs.google.com/document/d/1fBssyWkHStn7B299Zjk7dkELchdSHh6GFeblH9ibWLg/edit?usp=sharing"
+                title="Google-Docs"
+              >
+                <i
+                  style="margin-right: 0.5em;"
+                  class="align-left fas fa-paperclip"
+                ></i
+                >Curriculum Vitae
               </a>
             </p>
           </div>
           <div class="col-md-6 text-center py-5">
-            <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical"
-              data-theme="light" data-vanity="warwick-nortier-30712434">
-              <a class="LI-simple-link"
-                href="https://za.linkedin.com/in/warwick-nortier-30712434?trk=profile-badge">Warwick Nortier</a>
+            <div
+              class="LI-profile-badge"
+              data-version="v1"
+              data-size="medium"
+              data-locale="en_US"
+              data-type="vertical"
+              data-theme="light"
+              data-vanity="warwick-nortier-30712434"
+            >
+              <a
+                class="LI-simple-link"
+                href="https://za.linkedin.com/in/warwick-nortier-30712434?trk=profile-badge"
+                >Warwick Nortier</a
+              >
             </div>
           </div>
         </div>
@@ -33,10 +51,27 @@
       </div>
       <div class="row">
         <template>
-          <app-Projects v-for="(project, index) in projects" :project="project" :key="index" />
+          <app-Projects
+            v-for="(project, index) in projects"
+            :project="project"
+            :key="index"
+          />
         </template>
       </div>
+      <div class="col-md-12">
+        <h2>Wakatime Developer Statistics</h2>
+        <hr />
+      </div>
+      <div class="row">
+        <app-Wakatime
+          v-for="(wakatime, index) in wakatime"
+          :wakatime="wakatime"
+          :key="index"
+        />
+      </div>
     </div>
+
+    <!-- d-flex flex-column align-items-center justify-content-center -->
 
     <div style="margin-top:100px;"></div>
 
@@ -49,6 +84,7 @@
 
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
+import Wakatime from "./components/Wakatime";
 
 import axios from "axios";
 
@@ -114,12 +150,25 @@ export default {
           description:
             "ChatCord is a realtime chat web application with chatrooms.  It was built on the backend using NodeJS with the Express module and the socket.io websockets package."
         }
+      ],
+      wakatime: [
+        {
+          site: "https://wakatime.com",
+          src:
+            "https://wakatime.com/share/@f42aeeff-e8cf-47c5-8253-1ea66bf1534d/fe62bd2f-5bc8-4bfa-89f6-8aee0132d45d.png"
+        },
+        {
+          site: "https://wakatime.com",
+          src:
+            "https://wakatime.com/share/@f42aeeff-e8cf-47c5-8253-1ea66bf1534d/00f5210e-a27d-44d7-8ef4-44ccad0a9ca5.png"
+        }
       ]
     };
   },
   components: {
     "app-Footer": Footer,
-    "app-Projects": Projects
+    "app-Projects": Projects,
+    "app-Wakatime": Wakatime
   },
   created() {
     var self = this;
