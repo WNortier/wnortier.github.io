@@ -31,4 +31,12 @@ img {
     border: 0.85px solid lightgrey;
   }
 }
+
+@media (max-width: 768px) {
+  .flex-item {
+    width: 400px;
+    margin: 1rem;
+    border: 0.85px solid lightgrey;
+  }
+}
 </style>
